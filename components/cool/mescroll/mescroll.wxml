@@ -1,0 +1,27 @@
+<scroll-view scroll-y class="scroll" refresher-enabled="{{true}}"
+  refresher-threshold="{{100}}"
+  refresher-default-style="black"
+  refresher-background="#f2f2f2"
+  refresher-triggered="{{triggered}}"
+  bindrefresherpulling="onPulling"
+  bindrefresherrefresh="onRefresh"
+  bindrefresherrestore="onRestore"
+  bindrefresherabort="onAbort" bindscrolltolower="lower" style="{{stylestr}}">
+  <!-- <view hidden="{{isRefreshLoading ? false : true}}" class="isRefreshLoading">
+    <image class="ico" mode="aspectFill" src="http://upload-images.jianshu.io/upload_images/5726812-95bd7570a25bd4ee.gif"></image>
+    下拉刷新中
+  </view> -->
+  <view class="inner-empty" wx:if="{{isEmpty==0 && !isRefreshLoading}}">
+    <image src="../../../icons/mescroll-empty.png" class="empty-img" mode="aspectFill"></image>
+  </view>
+  <view  class="inner"  wx:else>
+    <slot name="inner"  ></slot>
+  </view>
+  <!-- <view hidden="{{isLoadMoreLoading ? false : true}}" class="isLoadMoreLoading">
+    <image class="ico" mode="aspectFill" src="http://upload-images.jianshu.io/upload_images/5726812-95bd7570a25bd4ee.gif"></image>
+    上拉加载中
+  </view> -->
+  <!-- <view hidden="{{isNoneLoading ? false : true}}" class="isLoadMoreLoading">
+    没有更多了
+  </view> -->
+</scroll-view>

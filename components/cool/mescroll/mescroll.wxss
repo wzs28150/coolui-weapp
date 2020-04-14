@@ -1,0 +1,35 @@
+.scroll {
+  position: relative;
+  z-index: 1;
+}
+.scroll .isLoadMoreLoading,
+.scroll .isRefreshLoading {
+  text-align: center;
+  height: 3em;
+  line-height: 3em;
+  color: #999;
+  font-size: 28rpx;
+}
+.scroll .isLoadMoreLoading .ico,
+.scroll .isRefreshLoading .ico {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  margin-right: 10px;
+  transform: translateY(-1px);
+}
+.scroll .inner {
+  min-height: 100%;
+}
+.scroll .inner-empty {
+  text-align: center;
+  color: #999;
+  height: 100%;
+  overflow: hidden;
+}
+.scroll .inner-empty .empty-img {
+  width: 210rpx;
+  height: 227rpx;
+  margin: 20vw auto 5vh;
+  display: block;
+}
